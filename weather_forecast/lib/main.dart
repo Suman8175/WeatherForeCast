@@ -7,11 +7,12 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
+    print(context.runtimeType);
     return MaterialApp(
-      theme: ThemeData.dark(useMaterial3: true),
+      theme:
+          ThemeData(useMaterial3: true, colorScheme: const ColorScheme.dark()),
       home: const WeatherForecast(),
       debugShowCheckedModeBanner: false,
     );
